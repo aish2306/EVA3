@@ -1,1 +1,12 @@
-We begin by importing the necessary libraries in the notebook. Laying emphasis on new keywords such as tqdm and tensorflow.contrib.eager, we find that TensorFlow's eager execution is an imperative programming environment that evaluates operations immediately, without building graphs: operations return concrete values instead of constructing a computational graph to run later which makes it easy to get started with TensorFlow and debug models, and it reduces boilerplate as well, whereas tqdm, on the other hand,is used to show a progress meter wherever loops are involved. We are using a model called DavidNet on Cifar10 data which consists of tiny images of 20 classes(similar to MNIST). It is easier to attain 90% accuracy on MNIST dataset compared to Cifar10. Built by David C. Page and named after him. There is an online competition about fast training called DAWNBench in which David reaches 94% with 75 seconds of training (excluding evaluation time) on a Tesla V100 GPU (125 tflops). On Colab’s TPUv2 (180 tflops), we have comparable performance as the TPU takes time to initialize.  The 32*32 images are normalized for processing and the model's accuracy is 99.01% in 24 epochs with a batch size of 512, learning rate of 0.4 and momentum 0.9
+We begin by importing the necessary libraries in the notebook. 
+Laying emphasis on new keywords such as tqdm and tensorflow.contrib.eager, we find that TensorFlow's eager execution is an 
+imperative programming environment that evaluates operations immediately, without building graphs: operations return concrete values
+instead of constructing a computational graph to run later which makes it easy to get started with TensorFlow and debug models, 
+and it reduces boilerplate as well, whereas tqdm, on the other hand,is used to show a progress meter wherever loops are involved.
+We are using a model called DavidNet on Cifar10 data which consists of tiny images of 20 classes(similar to MNIST). 
+It is easier to attain 90% accuracy on MNIST dataset compared to Cifar10. Built by David C. Page and named after him. 
+There is an online competition about fast training called DAWNBench in which David reaches 94% with 75 seconds of training(excluding evaluation time)
+on a Tesla V100 GPU (125 tflops). 
+On Colab’s TPUv2 (180 tflops), we have comparable performance as the TPU takes time to initialize.  
+The 32*32 images are normalized for processing and the model's accuracy is 99.01% in 24 epochs with a batch size of 512,
+learning rate of 0.4 and momentum 0.9
